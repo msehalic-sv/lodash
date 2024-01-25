@@ -24,6 +24,7 @@ import toInteger from './toInteger.js';
  * // => [1, 2, 3]
  */
 function drop(array, n = 1) {
+  //random comment
     const length = array == null ? 0 : array.length;
     return length ? slice(array, n < 0 ? 0 : toInteger(n), length) : [];
 }
