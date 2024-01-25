@@ -21,6 +21,7 @@ function clamp(number: number, lower: number, upper: number) {
     upper = +upper;
     lower = lower === lower ? lower : 0;
     upper = upper === upper ? upper : 0;
+    // if the number is equal to number
     if (number === number) {
         number = number <= upper ? number : upper;
         number = number >= lower ? number : lower;
