@@ -15,6 +15,7 @@
  */
 function delay(func: Function, wait: number, ...args: any[]) {
     if (typeof func !== 'function') {
+        // if func is not of type function
         throw new TypeError('Expected a function');
     }
     // eslint-disable-next-line @typescript-eslint/no-implied-eval
