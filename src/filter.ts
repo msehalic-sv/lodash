@@ -27,6 +27,7 @@ function filter(array, predicate) {
     const length = array == null ? 0 : array.length;
     const result = [];
 
+    // while index is smaller than array size
     while (++index < length) {
         const value = array[index];
         if (predicate(value, index, array)) {
