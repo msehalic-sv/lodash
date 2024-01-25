@@ -14,6 +14,7 @@
  */
 function defer(func: Function, ...args: any[]) {
     if (typeof func !== 'function') {
+        // if func is not an actual function
         throw new TypeError('Expected a function');
     }
     // eslint-disable-next-line @typescript-eslint/no-implied-eval
