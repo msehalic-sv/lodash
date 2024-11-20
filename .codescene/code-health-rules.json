@@ -39,10 +39,10 @@
         "value" : "-"
       }, {
         "name" : "function_duplication_min_lines_of_code_for_check",
-        "value" : "10"
+        "value" : "5"
       }, {
         "name" : "function_duplication_min_similarity_percentage",
-        "value" : "90"
+        "value" : "30"
       }, {
         "name" : "function_embedded_content_lines_of_code_alert",
         "value" : "-"
