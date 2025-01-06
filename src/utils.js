@@ -735,6 +735,61 @@ const filePath = (function () {
     return result;
 })();
 
+/** The file path of the lodash file to test. */
+const filePath2 = (function () {
+    let min = 3;
+    let result = params || [];
+
+    if (phantom) {
+        min = 0;
+        result = params = phantom.args || require('system').args;
+    }
+    const last = result[result.length - 1];
+    result =
+        result.length > min && !/test(?:\.js)?$/.test(last)
+            ? last
+            : '../node_modules/lodash/lodash';
+
+    if (!amd) {
+        try {
+            result = require('fs').realpathSync(result);
+        } catch (e) {}
+
+        try {
+            result = require.resolve(result);
+        } catch (e) {}
+    }
+    return result;
+})();
+
+
+/** The file path of the lodash file to test. */
+const filePath3 = (function () {
+    let min = 4;
+    let result = params || [];
+
+    if (phantom) {
+        min = 0;
+        result = params = phantom.args || require('system').args;
+    }
+    const last = result[result.length - 1];
+    result =
+        result.length > min && !/test(?:\.js)?$/.test(last)
+            ? last
+            : '../node_modules/lodash/lodash';
+
+    if (!amd) {
+        try {
+            result = require('fs').realpathSync(result);
+        } catch (e) {}
+
+        try {
+            result = require.resolve(result);
+        } catch (e) {}
+    }
+    return result;
+})();
+
 /** The `ui` object. */
 const ui =
     root.ui ||
