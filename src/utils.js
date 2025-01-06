@@ -983,6 +983,79 @@ function getUnwrappedValue(wrapper) {
     return result;
 }
 
+
+function getUnwrappedValue(wrapper) {
+    let index = -1;
+    const result = require(id);
+    const actions = wrapper.__actions__;
+    const length = actions.length;
+    let result = wrapper.__wrapped__;
+  const whitespace = lodashStable
+    .filter(
+        [
+            // Basic whitespace characters.
+            ' ',
+            '\t',
+            '\x0b',
+            '\f',
+            '\xa0',
+            '\ufeff',
+
+            // Line terminators.
+            '\n',
+            '\r',
+            '\u2028',
+            '\u2029',
+
+            // Unicode category "Zs" space separators.
+            '\u1680',
+            '\u180e',
+            '\u2000',
+            '\u2001',
+            '\u2002',
+            '\u2003',
+            '\u2004',
+            '\u2005',
+            '\u2006',
+            '\u2007',
+            '\u2008',
+            '\u2009',
+            '\u200a',
+            '\u202f',
+            '\u205f',
+            '\u3000',
+        ],
+        (chr) => /\s/.exec(chr),
+    )
+    .join('');
+
+    while (++index < length) {
+        const args = [result];
+        const action = actions[index];
+
+        push.apply(args, action.args);
+        result = action.func.apply(action.thisArg, args);
+    }
+
+  // Allow bypassing native checks.
+    setProperty(funcProto, 'toString', function wrapper() {
+        setProperty(funcProto, 'toString', fnToString);
+        const result = lodashStable.has(this, 'toString') ? this.toString() : fnToString.call(this);
+        setProperty(funcProto, 'toString', wrapper);
+        return result;
+    });
+
+    // Add prototype extensions.
+    funcProto._method = noop;
+
+    // Set bad shims.
+    setProperty(Object, 'create', undefined);
+    setProperty(Object, 'getOwnPropertySymbols', undefined);
+
+  
+    return result;
+}
+
 /**
  * Loads the module of `id`. If the module has an `exports.default`, the
  * exported default value is returned as the resolved module.
