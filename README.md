@@ -70,3 +70,12 @@ Lodash is available in a [variety of builds](https://lodash.com/custom-builds) &
 
  * [lodash](https://www.npmjs.com/package/lodash) & [per method packages](https://www.npmjs.com/search?q=keywords:lodash-modularized)
  * [lodash-es](https://www.npmjs.com/package/lodash-es), [babel-plugin-lodash](https://www.npmjs.com/package/babel-plugin-lodash), & [lodash-webpack-plugin](https://www.npmjs.com/package/lodash-webpack-plugin)
+
+
+[![CodeScene Average Code Health](https://a357-2a02-27b0-5305-bff0-39ef-3b31-7c6b-61b5.ngrok-free.app/2/status-badges/average-code-health)](https://a357-2a02-27b0-5305-bff0-39ef-3b31-7c6b-61b5.ngrok-free.app/2/analyses/latest)
+
+[![CodeScene Hotspot Code Health](https://a357-2a02-27b0-5305-bff0-39ef-3b31-7c6b-61b5.ngrok-free.app/2/status-badges/hotspot-code-health)](https://a357-2a02-27b0-5305-bff0-39ef-3b31-7c6b-61b5.ngrok-free.app/2/analyses/latest)
+
+[![CodeScene Missed Goals](https://a357-2a02-27b0-5305-bff0-39ef-3b31-7c6b-61b5.ngrok-free.app/2/status-badges/missed-goals)](https://a357-2a02-27b0-5305-bff0-39ef-3b31-7c6b-61b5.ngrok-free.app/2/analyses/latest)
+
+[![CodeScene System Mastery](https://a357-2a02-27b0-5305-bff0-39ef-3b31-7c6b-61b5.ngrok-free.app/2/status-badges/system-mastery)](https://a357-2a02-27b0-5305-bff0-39ef-3b31-7c6b-61b5.ngrok-free.app/2/analyses/latest)
